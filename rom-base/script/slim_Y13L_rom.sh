@@ -44,7 +44,6 @@ media_files=(${_mp3s[@]} ${_animations[@]} \
 ##others
 #system/tts/lang_pico/
 _langtts=(de-DE_gl0_sg.bin de-DE_ta.bin \
-    en-GB_kh0_sg.bin en-GB_ta.bin \
     es-ES_ta.bin es-ES_zl0_sg.bin \
     fr-FR_nk0_sg.bin fr-FR_ta.bin \
     it-IT_cm0_sg.bin it-IT_ta.bin)
