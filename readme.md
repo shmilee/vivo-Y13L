@@ -198,3 +198,8 @@ java -jar signapk.jar testkey.x509.pem testkey.pk8 Y13L-apps.zip Y13L-apps-$(dat
 rm Y13L-apps.zip
 ```
 
+## *SuperSU*.zip
+
+* UPDATE-SuperSU-v2.14.zip (from other rom)
+* Stable [UPDATE-SuperSU-v2.65-20151226141550.zip](http://forum.xda-developers.com/showthread.php?t=1538053)
+
