@@ -198,6 +198,9 @@ java -jar signapk.jar testkey.x509.pem testkey.pk8 Y13L-apps.zip Y13L-apps-$(dat
 rm Y13L-apps.zip
 ```
 
+3. more-app --> sd卡。
+
+
 ## *SuperSU*.zip
 
 * UPDATE-SuperSU-v2.14.zip (from other rom)

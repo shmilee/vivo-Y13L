@@ -1,0 +1,18 @@
+## sd卡/more-app ---手动安装---> data/app/
+
+* [2WeiMa_v4.5.apk](http://android.25pp.com/detail_248799.html)
+* 12306v2.3.apk (官网)
+* acfun_v4.1.5_portal.apk (官网)
+* Baicizhan_5.2.0.apk (官网)
+* BaiduMaps_Android_9-0-5_1012676b.apk (官网)
+* BaiduMusic-musicsybutton.apk (官网)
+* BiliPlayer3.apk (官网)
+* DoodleJump_v1.66.apk (longlongago)
+* [ioscompass_v1.5_6.apk](http://soft.shouji.com.cn/down/31064.html)
+* Kingdee.Express_3.2.8_328.apk (官网)
+* netease_open_androidphone.apk (官网)
+* sohuVideoMobile_5.3.0_47_20160201091158.apk (官网)
+* Telnet_SSH_Simple_Client_v1.2.0.apk (xxx)
+* weibo_v5.7.0.apk (官网)
+* weixin6315android760.apk (官网)
+* [搜狗输入法v6.5.2-魅蓝Note2.apk](http://bbs.zhiyoo.com/thread-9664671-1-1.html)

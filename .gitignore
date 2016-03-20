@@ -5,3 +5,4 @@ rom-base/core-app/tmp*files
 extra-app/*
 !extra-app/extra-app.sh
 !extra-app/update-binary
+more-app/*.apk
