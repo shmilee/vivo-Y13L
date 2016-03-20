@@ -2,3 +2,6 @@
 tools/vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 rom-base/*.zip
 rom-base/core-app/tmp*files
+extra-app/*
+!extra-app/extra-app.sh
+!extra-app/update-binary
