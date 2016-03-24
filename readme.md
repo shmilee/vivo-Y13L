@@ -160,15 +160,18 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 
 ## Y13L-apps-20160320.zip
 
-来源，首选官网，然后手机乐园，最后论坛贴吧。
+来源，首选官网，然后手机乐园、apkpure，最后论坛贴吧。
 
 1. extra-app --> system/app/
   
   * Amap_V7.6.4.2043.apk (官网 正式版)
   * [ezPDF_Reader_v2.6.6.1.apk](http://soft.shouji.com.cn/down/20236.html)
+  * [Firefox_Browser_v45.0.1.apk](https://apkpure.com/firefox-browser-for-android/org.mozilla.firefox)  
+    addons: Adblock Plus, Network Preferences Add-on.  
+    CAs: Import the CA file by downloading it in the browser.
   * ForaDictionary_v17.1.apk ([官网](http://ng-comp.com/fora/android.htm))
   * kiwix-1.97.apk (官网)
-  * Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))
+  * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
   * mobileqq_v6.2.3.apk (官网)
   * moffice_cn00563.apk (官网)
   * [rootexplorer_3.3.8_109.apk](http://soft.shouji.com.cn/down/17849.html)
@@ -177,7 +180,10 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
   * ~~WI_IME_Android_2.5.apk (官网)~~
   * [百度输入法小米V6版+6.0.5.3.apk](http://bbs.zhiyoo.com/thread-12435967-1-1.html)
 
-2. extra-app --> data/app/ (在system/app/中无法工作的app，只能放data/app下)
+2. extra-app --> system/vivo-apps/
+  
+  在system/app/中无法工作的app，或是与系统的lib文件有冲突的app。
+  在开机后，这些app通过 *设置-更多设置-应用程序-出厂应用程序管理* 安装到data/app下。
   
   * ~~[goldendict_1.6.2_A44_CR_HA.apk](http://bbs.mfunz.com/thread-956541-1-1.html)~~
   * GoldenDict-1.6.5-Android-4.4+-free.apk ([官网](http://goldendict.mobi/downloads/android/free/))
@@ -186,6 +192,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 用脚本``extra-app.sh``自动抽取lib文件，部署软件和库，压缩为zip文件。
 
 ```
+./extra-app.sh analyse <root-of-base-rom>
 ./extra-app.sh deploy
 ./extra-app.sh zip Y13L-apps.zip
 ```
