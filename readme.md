@@ -165,6 +165,8 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 1. extra-app --> system/app/
   
   * Amap_V7.6.4.2043.apk (官网 正式版)
+  * [BubbleUPnP-2.6.1.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html)  
+    DLNA server and client, cooperates with XBMC on PC.
   * [ezPDF_Reader_v2.6.6.1.apk](http://soft.shouji.com.cn/down/20236.html)
   * [Firefox_Browser_v45.0.1.apk](https://apkpure.com/firefox-browser-for-android/org.mozilla.firefox)  
     addons: Adblock Plus, Network Preferences Add-on.  

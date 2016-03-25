@@ -9,6 +9,7 @@ abi2=armeabi
 # 无lib冲突 -> system/app/
 # 有lib冲突 -> system/vivo-apps/
 extra_apps=(AutonaviMap::Amap_V7.6.4.2043.apk \
+    BubbleUPnP::BubbleUPnP-2.6.1.apk \
     ezPDF_Reader::ezPDF_Reader_v2.6.6.1.apk \
     Firefox_Browser::Firefox_Browser_v45.0.1.apk \
     ForaDictionary::ForaDictionary_v17.1.apk \
