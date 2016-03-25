@@ -94,7 +94,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 * 官方升级包精简，少部分app，铃声 --> Y13L-base-version-shmilee.zip
 * 常用app升级包 --> Y13L-apps-dateVersion.zip
 * Root卡刷包    --> *SuperSU*.zip
-* Busybox卡刷包 --> Busybox-version-armv7.zip
+* Busybox卡刷包 --> Update-Busybox-version-armv7l.zip
 * kbox卡刷包    --> kbox3-dateVersion.zip
 
 
@@ -212,4 +212,9 @@ rm Y13L-apps.zip
 
 * UPDATE-SuperSU-v2.14.zip (from other rom)
 * Stable [UPDATE-SuperSU-v2.65-20151226141550.zip](http://forum.xda-developers.com/showthread.php?t=1538053)
+
+## Update-Busybox-v1.21.1-armv7l.zip
+
+运行 ``mkbusybox.sh``, 然后签名。
+
 

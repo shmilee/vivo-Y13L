@@ -6,3 +6,4 @@ extra-app/*
 !extra-app/extra-app.sh
 !extra-app/update-binary
 more-app/*.apk
+busybox/busybox-update-dir
