@@ -164,7 +164,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 
 1. extra-app --> system/app/
   
-  * Amap_V7.6.4.2043.apk (官网 正式版)
+  * BaiduMaps_Android_9-1-5_1009179g.apk (官网)
   * [BubbleUPnP-2.6.1.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html)  
     DLNA server and client, cooperates with XBMC on PC.
   * [ezPDF_Reader_v2.6.6.1.apk](http://soft.shouji.com.cn/down/20236.html)
@@ -174,11 +174,11 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
   * ForaDictionary_v17.1.apk ([官网](http://ng-comp.com/fora/android.htm))
   * kiwix-1.97.apk (官网)
   * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
-  * mobileqq_v6.2.3.apk (官网)
-  * moffice_cn00563.apk (官网)
+  * moffice_v9.6.1.apk (官网)
   * [rootexplorer_3.3.8_109.apk](http://soft.shouji.com.cn/down/17849.html)
   * [smart_tools_v1.7.9_83.apk](http://soft.shouji.com.cn/down/20319.html)
   * [TerminalEmulator_v 1.0.70](https://github.com/jackpal/Android-Terminal-Emulator)
+  * weixin6315android760.apk (官网)
   * ~~WI_IME_Android_2.5.apk (官网)~~
   * [百度输入法小米V6版+6.0.5.3.apk](http://bbs.zhiyoo.com/thread-12435967-1-1.html)
 

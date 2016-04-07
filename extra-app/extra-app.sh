@@ -8,18 +8,23 @@ abi2=armeabi
 
 # 无lib冲突 -> system/app/
 # 有lib冲突 -> system/vivo-apps/
-extra_apps=(AutonaviMap::Amap_V7.6.4.2043.apk \
+extra_apps=(BaiduMaps::BaiduMaps_Android_9-1-5_1009179g.apk \
     BubbleUPnP::BubbleUPnP-2.6.1.apk \
     ezPDF_Reader::ezPDF_Reader_v2.6.6.1.apk \
     Firefox_Browser::Firefox_Browser_v45.0.1.apk \
     ForaDictionary::ForaDictionary_v17.1.apk \
     kiwix::kiwix-1.97.apk \
-    mobileQQ::mobileqq_v6.2.3.apk \
-    wpsoffice::moffice_cn00563.apk \
+    wpsoffice::moffice_v9.6.1.apk \
     rootexplorer::rootexplorer_3.3.8_109.apk \
     smart_tools::smart_tools_v1.7.9_83.apk \
     TerminalEmulator::TerminalEmulator_v1.0.70.apk \
+    weixin::weixin6315android760.apk \
     BaiduIME::百度输入法小米V6版+6.0.5.3.apk)
+
+# base包已有的库文件
+# 即使 app 中包含这些库文件，也不算冲突
+# 默认保留使用 base 的库，删除 app带的
+lib_ignore=(libentryexstd.so)
 
 # -> system/vivo-apps/
 extra_vivoapps=(goldendict::GoldenDict-1.6.5-Android-4.4+-free.apk \
@@ -77,6 +82,12 @@ analyse_app() {
         fi
         mkdir ./tmp_app_files/$apk
         if unzip -qq $file "lib/$abi/*" -d ./tmp_app_files/$apk; then
+            for so in ${lib_ignore[@]}; do
+                if [ -f ./tmp_app_files/$apk/lib/$abi/$so ]; then
+                    echo "==== remove (base)$so from $file ===="
+                    rm -v ./tmp_app_files/$apk/lib/$abi/$so
+                fi
+            done
             libfiles=($(ls ./tmp_app_files/$apk/lib/$abi/))
             if check_conflict ./tmp_app_files/$apk/lib/$abi/ "$rom_dir"/system/lib; then
                 vivo_apk+=("${apk}(lib-conflict)")
@@ -89,6 +100,12 @@ analyse_app() {
                     | sed 's/ /\n/g'> ./tmp_app_files/file_list/${apk}.list
             fi
         elif unzip -qq $file "lib/$abi2/*" -d ./tmp_app_files/$apk; then
+            for so in ${lib_ignore[@]}; do
+                if [ -f ./tmp_app_files/$apk/lib/$abi2/$so ]; then
+                    echo "==== remove (base)$so from $file ===="
+                    rm -v ./tmp_app_files/$apk/lib/$abi2/$so
+                fi
+            done
             libfiles2=($(ls ./tmp_app_files/$apk/lib/$abi2/))
             if check_conflict ./tmp_app_files/$apk/lib/$abi2/ "$rom_dir"/system/lib; then
                 vivo_apk+=("${apk}(lib-conflict)")
