@@ -1,0 +1,11 @@
+source /system/etc/common_shell.profile
+
+if [ ! -e $HISTFILE ]; then
+    echo "History file missing, creating..."
+    echo "ls" > $HISTFILE
+    chmod 666 $HISTFILE
+fi
+
+if [ -f $EXTERNAL_STORAGE/.bashrc ]; then
+    source $EXTERNAL_STORAGE/.bashrc
+fi

@@ -1,0 +1,49 @@
+#!/system/bin/mksh
+
+BUSYBOX=/system/busybox/busybox
+ASH=/system/busybox/ash
+BASH=/system/busybox/bash
+
+usage() {
+    echo "Usage: chshell [-h] [-v] [<SHELL> <ENV-file|rc_file>]"
+    echo "   -h      Show this help."
+    echo "   -v      Show buysbox & bash version."
+    echo " SHELL:"
+    echo "   ash    Change shell to '$ASH'. (default)"
+    echo "          Use /system/etc/busybox_ashrc as ENV file."
+    echo "   bash   Change shell to '$BASH'."
+    echo "          Use /system/etc/bash/bashrc as default rcfile."
+}
+
+version() {
+    echo
+    $BUSYBOX | $BUSYBOX head -4
+    echo
+    $BASH --version
+    echo
+}
+
+if [ x$1 == x-h ]; then
+    usage
+    exit 0
+elif [ x$1 == x-v ]; then
+    version
+    exit 0
+else
+    new_shell=${1:-$ASH}
+    if [ x$new_shell == xash -o x$new_shell == x$ASH ]; then
+        $BUSYBOX | $BUSYBOX head -4
+        env_file=${2:-/system/etc/busybox_ashrc}
+        ENV=$env_file exec $ASH
+    elif [ x$new_shell == xbash -o x$new_shell == x$BASH ]; then
+        $BASH --version
+        rc_file=${2:-/system/etc/bash/bashrc}
+        exec $BASH --rcfile $rc_file -i
+    else
+        if [ ! -f $new_shell ]; then
+            echo "'!!! $new_shell' not found."
+            exit 1
+        fi
+        exec $new_shell
+    fi
+fi

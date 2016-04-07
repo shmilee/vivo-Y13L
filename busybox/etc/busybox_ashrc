@@ -1,0 +1,7 @@
+source /system/etc/common_shell.profile
+
+alias history='/system/bin/cat -n $HISTFILE'
+
+if [ -f $EXTERNAL_STORAGE/.ashrc ]; then
+    source $EXTERNAL_STORAGE/.ashrc
+fi

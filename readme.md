@@ -217,6 +217,32 @@ rm Y13L-apps.zip
 
 ## Update-Busybox-v1.21.1-armv7l.zip
 
+* 官网 busybox 可执行文件。
+
+* ~~bash 来自 https://github.com/YongSunPark/busybox/tree/master/bash-4.1-arm~~
+
+* Better Terminal Emulator Pro v4.04 下载的 bettertermpro.zip, 提取 bash:
+  
+  ```
+  bin/bash
+  etc/terminfo/l/linux
+  etc/terminfo/v/vt100
+  etc/terminfo/v/vt220
+  etc/terminfo/x/xterm
+  ```
+  
+* script/chmount: 将 mount 命令链接到 busybox，使 root 后可以挂载 system 为读写。
+
+* script/chshell: 切换不同的 shell，主要为 ash 和 bash 。
+
+* script/updater-script
+
+* etc/bash/bashrc
+
+* etc/busybox_ashrc
+
+* etc/common_shell.profile
+
 运行 ``mkbusybox.sh``, 然后签名。
 
 

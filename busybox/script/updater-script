@@ -1,0 +1,22 @@
+delete("/system/bin/chshell");
+delete("/system/bin/chmount");
+delete("/system/etc/busybox_ashrc");
+delete("/system/etc/common_shell.profile");
+delete_recursive("/system/etc/bash");
+delete_recursive("/system/etc/terminfo");
+delete_recursive("/system/busybox");
+
+ui_print("extract system...");
+assert(package_extract_dir("system", "/system"));
+show_progress(0.300000, 60);
+
+set_metadata("/system/bin/chshell", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/bin/chmount", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/etc/busybox_ashrc", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/etc/common_shell.profile", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata_recursive("/system/etc/bash", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata_recursive("/system/etc/terminfo", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata_recursive("/system/busybox", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/busybox/busybox", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+show_progress(0.100000, 5);
+

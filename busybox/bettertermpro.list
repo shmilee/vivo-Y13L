@@ -1,0 +1,5 @@
+bin/bash
+etc/terminfo/l/linux
+etc/terminfo/v/vt100
+etc/terminfo/v/vt220
+etc/terminfo/x/xterm

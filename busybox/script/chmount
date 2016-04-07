@@ -1,0 +1,36 @@
+#!/system/bin/mksh
+
+BUSYBOX=/system/busybox/busybox
+TOOLBOX=/system/bin/toolbox
+
+usage() {
+    echo "Usage: chmount [-h] [busybox|toolbox] [b|t]"
+    echo "  busybox|b   Link mount to buysbox."
+    echo "              Help you to mount /system (rw)."
+    echo "  toolbox|t   Link mount to toolbox."
+    echo "  -h          Show this help."
+}
+
+if [ $USER_ID == 0 ]; then
+    if [ x$1 == x-h -o x$1 == x ]; then
+        usage
+        exit 0
+    fi
+
+    $BUSYBOX mount -o remount,rw /system
+    if [ x$1 == xbusybox -o x$1 == xb ]; then
+        echo "Link mount to buysbox ..."
+        $BUSYBOX ln -s -v -f $BUSYBOX /system/bin/mount
+    elif [ x$1 == xtoolbox -o x$1 == xt ]; then
+        echo "Link mount to toolbox ..."
+        $BUSYBOX ln -s -v -f $TOOLBOX /system/bin/mount
+    else
+        echo "Unknown Option: $1."
+        usage
+    fi
+    $BUSYBOX mount -o remount,ro /system
+    echo "Done."
+else
+    echo "[ERR] You must be super user to run this command!"
+    usage
+fi
