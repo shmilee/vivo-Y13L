@@ -219,18 +219,40 @@ rm Y13L-apps.zip
 
 * 官网 busybox 可执行文件。
 
-* ~~bash 来自 https://github.com/YongSunPark/busybox/tree/master/bash-4.1-arm~~
-
 * Better Terminal Emulator Pro v4.04 下载的 bettertermpro.zip, 提取 bash:
   
   ```
-  bin/bash
+  bin/bash #(strings bash | grep bashrc --> /system/etc/bash/bashrc)
   etc/terminfo/l/linux
   etc/terminfo/v/vt100
   etc/terminfo/v/vt220
   etc/terminfo/x/xterm
   ```
+
+* openssh 来自 ``https://github.com/jackpal/android-command-line-ssh``.
   
+  ```
+  scp        -> busybox/scp
+  sftp       -> busybox/sftp
+  ssh_exe    -> busybox/ssh #(strings ssh | grep ssh_config --> /data/local/.ssh/ssh_config)
+  ssh-keygen -> busybox/ssh-keygen
+  libssh.so  -> lib/libssh.so
+  ```
+  
+  Because:  
+  1) WARNING: linker: libssh.so has text relocations. This is wasting memory and is a security risk.  
+  2) The prebuilt files are not stripped.  
+  So I need to build them by myself.
+  
+  First, download and extract [android-ndk-r8e](https://dl.google.com/android/ndk/android-ndk-r8e-linux-x86_64.tar.bz2).  
+  Then, git clone the repository. Build. Bin,lib files are in ``libs/armeabi-v7a/``. Archive them.
+  
+  ```
+  git clone --depth=1 https://github.com/jackpal/android-command-line-ssh
+  cd android-command-line-ssh/jni
+  <path/to/android-ndk-r8e/ndk-build -j4
+  ```
+
 * script/chmount: 将 mount 命令链接到 busybox，使 root 后可以挂载 system 为读写。
 
 * script/chshell: 切换不同的 shell，主要为 ash 和 bash 。

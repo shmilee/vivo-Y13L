@@ -5,6 +5,7 @@ delete("/system/etc/common_shell.profile");
 delete_recursive("/system/etc/bash");
 delete_recursive("/system/etc/terminfo");
 delete_recursive("/system/busybox");
+delete("/system/lib/libssh.so");
 
 ui_print("extract system...");
 assert(package_extract_dir("system", "/system"));
@@ -18,5 +19,7 @@ set_metadata_recursive("/system/etc/bash", "uid", 0, "gid", 0, "dmode", 0755, "f
 set_metadata_recursive("/system/etc/terminfo", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/busybox", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/busybox/busybox", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/lib/libssh.so", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+
 show_progress(0.100000, 5);
 

@@ -23,13 +23,13 @@ else
 fi
 
 [ -d ./busybox-update-dir/ ] && rm -r ./busybox-update-dir/
-mkdir -pv ./busybox-update-dir/system/{bin,busybox,etc}
+mkdir -pv ./busybox-update-dir/system/{bin,busybox,etc,lib}
 mkdir -pv ./busybox-update-dir/META-INF/com/google/android
 
-# 1.busybox
+# busybox
 cp -v $binfile ./busybox-update-dir/system/busybox/busybox
 
-# 2.bettertermpro
+# bettertermpro
 mkdir /tmp/bettertermpro
 unzip ./bettertermpro.zip `cat ./bettertermpro.list` -d /tmp/bettertermpro
 chmod 755 -R /tmp/bettertermpro
@@ -37,14 +37,19 @@ cp -vr /tmp/bettertermpro/bin/* ./busybox-update-dir/system/busybox/
 mv -v /tmp/bettertermpro/etc/terminfo ./busybox-update-dir/system/etc/
 rm -r /tmp/bettertermpro
 
-# 3.chshell chmount
+# ssh
+tar -xzv -C ./busybox-update-dir/system/busybox/ -f openssh.tar.gz scp sftp ssh_exe ssh-keygen
+mv ./busybox-update-dir/system/busybox/{ssh_exe,ssh}
+tar -xzv -C ./busybox-update-dir/system/lib/ -f openssh.tar.gz libssh.so
+
+# chshell chmount
 cat ./script/chshell > ./busybox-update-dir/system/bin/chshell
 cat ./script/chmount > ./busybox-update-dir/system/bin/chmount
 
-# 3.etc/*
+# etc/*
 cp -rv ./etc/* ./busybox-update-dir/system/etc/
 
-# 4.meta
+# meta
 uc_dir=./busybox-update-dir/META-INF/com/google/android
 cp -v ./update-binary $uc_dir/update-binary
 cat > $uc_dir/updater-script <<EOF
