@@ -94,7 +94,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 * 官方升级包精简，少部分app，铃声 --> Y13L-base-version-shmilee.zip
 * 常用app升级包 --> Y13L-apps-dateVersion.zip
 * Root卡刷包    --> *SuperSU*.zip
-* Busybox卡刷包 --> Update-Busybox-version-armv7l.zip
+* Busybox卡刷包 --> Update-Busybox-version-arch.zip
 * kbox卡刷包    --> kbox3-dateVersion.zip
 
 
@@ -207,7 +207,7 @@ java -jar signapk.jar testkey.x509.pem testkey.pk8 Y13L-apps.zip Y13L-apps-$(dat
 rm Y13L-apps.zip
 ```
 
-3. more-app --> sd卡。
+* more-app --> sd卡。
 
 
 ## *SuperSU*.zip
@@ -215,9 +215,37 @@ rm Y13L-apps.zip
 * UPDATE-SuperSU-v2.14.zip (from other rom)
 * Stable [UPDATE-SuperSU-v2.65-20151226141550.zip](http://forum.xda-developers.com/showthread.php?t=1538053)
 
-## Update-Busybox-v1.21.1-armv7l.zip
+## Update-Busybox-v1.24.2-armv7.zip
 
-* 官网 busybox 可执行文件。
+cpuinfo:
+
+```
+Processor	: ARMv7 Processor rev 0 (v7l)
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt
+Hardware	: Qualcomm Technologies, Inc MSM8916
+```
+
+* 官网最新二进制文件 [1.21.1](https://busybox.net/downloads/binaries/1.21.1/)
+  
+  自己动手编译新版 [busybox](https://github.com/meefik/busybox.git).
+  当前最新版本 v1.24.2, NDK 选用 [android-ndk-r8e](https://dl.google.com/android/ndk/android-ndk-r8e-linux-x86_64.tar.bz2) 。
+  
+  ```
+  cd <work/dir>
+  git clone https://github.com/meefik/busybox.git
+  cd busybox
+  git checkout tags/1.24.2 -b v1.24.2
+  cd contrib/
+  export ANDROID_NDK_ROOT="<path/to/android-ndk-r8e>"
+  sed -i 's/\(GCC_VERSION="\)4.9/\14.7/' bb-build.sh    #androideabi/gcc-4.7
+  sed -i 's/\(ANDROID_NATIVE_API_LEVEL="android\)-9/\1-14/' bb-build.sh    #platforms/android-14, Android 4.0 or later
+  sed -i '/EXTRAVERSION = -meefik.*Makefile/d' bb-build.sh    #no extraversion
+  #根据 cpuinfo 优化
+  sed -i 's/\(-march=arm\)v5te/\1v7/' bb-build.sh    #valid args: armv7 armv7-{a,m,r} armv7e-m
+  sed -i 's/-msoft-float \(-mfloat-abi=softfp -mfpu=\)neon/\1neon-vfpv4/' bb-build.sh    #mfpu
+  ./bb-build.sh arm static
+  cp busybox-1.24.2/busybox <this/repository/path>/busybox/busybox-v1.24.2-armv7
+  ```
 
 * Better Terminal Emulator Pro v4.04 下载的 bettertermpro.zip, 提取 bash:
   
@@ -250,7 +278,7 @@ rm Y13L-apps.zip
   ```
   git clone --depth=1 https://github.com/jackpal/android-command-line-ssh
   cd android-command-line-ssh/jni
-  <path/to/android-ndk-r8e/ndk-build -j4
+  <path/to/android-ndk-r8e>/ndk-build -j4
   ```
 
 * script/chmount: 将 mount 命令链接到 busybox，使 root 后可以挂载 system 为读写。

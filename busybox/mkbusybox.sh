@@ -1,25 +1,32 @@
 #!/bin/bash
 
-ARCH='armv7l'
-version='1.21.1'
 rm_cmds=(reboot su sulogin stty)
 
 msg() {
     echo -e "$@"
 }
 
-binfile="./busybox-${ARCH}-v$version"
-url="https://busybox.net/downloads/binaries/$version/busybox-$ARCH"
+#ARCH='armv7l'
+#version='1.21.1'
+ARCH='armv7'
+version='1.24.2'
 
-if [ -f $binfile ]; then
-    msg "Using $binfile ..."
-else
-    msg "Downloading $binfile ..."
-    if ! wget -c $url -O $binfile; then
-        msg "Failed. Check url and version."
-        rm $binfile
-        exit 1
+
+if [[ $version == '1.21.1' ]]; then
+    binfile="./busybox-${ARCH}-v1.21.1"
+    url="https://busybox.net/downloads/binaries/$version/busybox-$ARCH"
+    if [ -f $binfile ]; then
+        msg "Using $binfile ..."
+    else
+        msg "Downloading $binfile ..."
+        if ! wget -c $url -O $binfile; then
+            msg "Failed. Check url and version."
+            rm $binfile
+            exit 1
+        fi
     fi
+elif [[ $version == '1.24.2' ]]; then
+    binfile="./busybox-v1.24.2-${ARCH}"
 fi
 
 [ -d ./busybox-update-dir/ ] && rm -r ./busybox-update-dir/
