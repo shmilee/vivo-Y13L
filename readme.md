@@ -257,29 +257,7 @@ Hardware	: Qualcomm Technologies, Inc MSM8916
   etc/terminfo/x/xterm
   ```
 
-* openssh 来自 ``https://github.com/jackpal/android-command-line-ssh``.
-  
-  ```
-  scp        -> busybox/scp
-  sftp       -> busybox/sftp
-  ssh_exe    -> busybox/ssh #(strings ssh | grep ssh_config --> /data/local/.ssh/ssh_config)
-  ssh-keygen -> busybox/ssh-keygen
-  libssh.so  -> lib/libssh.so
-  ```
-  
-  Because:  
-  1) WARNING: linker: libssh.so has text relocations. This is wasting memory and is a security risk.  
-  2) The prebuilt files are not stripped.  
-  So I need to build them by myself.
-  
-  First, download and extract [android-ndk-r8e](https://dl.google.com/android/ndk/android-ndk-r8e-linux-x86_64.tar.bz2).  
-  Then, git clone the repository. Build. Bin,lib files are in ``libs/armeabi-v7a/``. Archive them.
-  
-  ```
-  git clone --depth=1 https://github.com/jackpal/android-command-line-ssh
-  cd android-command-line-ssh/jni
-  <path/to/android-ndk-r8e>/ndk-build -j4
-  ```
+* openssh.tar.gz 来自 https://github.com/shmilee/android-cli-openssh.git
 
 * script/chmount: 将 mount 命令链接到 busybox，使 root 后可以挂载 system 为读写。
 

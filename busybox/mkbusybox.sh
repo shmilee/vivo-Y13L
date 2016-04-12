@@ -45,9 +45,9 @@ mv -v /tmp/bettertermpro/etc/terminfo ./busybox-update-dir/system/etc/
 rm -r /tmp/bettertermpro
 
 # ssh
-tar -xzv -C ./busybox-update-dir/system/busybox/ -f openssh.tar.gz scp sftp ssh_exe ssh-keygen
-mv ./busybox-update-dir/system/busybox/{ssh_exe,ssh}
-tar -xzv -C ./busybox-update-dir/system/lib/ -f openssh.tar.gz libssh.so
+tar -xzv -C ./busybox-update-dir/system/ -f openssh.tar.gz
+mv ./busybox-update-dir/system/bin/{ssh_exe,ssh}
+mv ./busybox-update-dir/system/bin/s* ./busybox-update-dir/system/busybox/
 
 # chshell chmount
 cat ./script/chshell > ./busybox-update-dir/system/bin/chshell
