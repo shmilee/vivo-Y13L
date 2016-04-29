@@ -92,7 +92,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 ==============
 
 * 官方升级包精简，少部分app，铃声 --> Y13L-base-version-shmilee.zip
-* 常用app升级包 --> Y13L-apps-dateVersion.zip
+* 常用app升级包 --> Update-apps-dateVersion.zip
 * Root卡刷包    --> *SuperSU*.zip
 * Busybox卡刷包 --> Update-Busybox-version-arch.zip
 * kbox卡刷包    --> kbox3-dateVersion.zip
@@ -158,27 +158,27 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
   rm ../Y13L-base.zip
   ```
 
-## Y13L-apps-20160320.zip
+## Update-apps-$(date +%Y%m%d).zip
 
 来源，首选官网，然后手机乐园、apkpure，最后论坛贴吧。
 
 1. extra-app --> system/app/
   
-  * BaiduMaps_Android_9-1-5_1009179g.apk (官网)
-  * [BubbleUPnP-2.6.1.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html)  
+  * BaiduMaps.apk (官网)
+  * [BubbleUPnP.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html)  
     DLNA server and client, cooperates with XBMC on PC.
-  * [ezPDF_Reader_v2.6.6.1.apk](http://soft.shouji.com.cn/down/20236.html)
-  * [Firefox_Browser_v45.0.1.apk](https://apkpure.com/firefox-browser-for-android/org.mozilla.firefox)  
+  * [ezPDF_Reader.apk](http://soft.shouji.com.cn/down/20236.html)
+  * [Firefox_Browser.apk](https://apkpure.com/firefox-browser-for-android/org.mozilla.firefox)  
     addons: Adblock Plus, Network Preferences Add-on.  
     CAs: Import the CA file by downloading it in the browser.
-  * ForaDictionary_v17.1.apk ([官网](http://ng-comp.com/fora/android.htm))
-  * kiwix-1.97.apk (官网)
+  * ForaDictionary.apk ([官网](http://ng-comp.com/fora/android.htm))
+  * kiwix.apk (官网)
   * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
-  * moffice_v9.6.1.apk (官网)
-  * [rootexplorer_3.3.8_109.apk](http://soft.shouji.com.cn/down/17849.html)
-  * [smart_tools_v1.7.9_83.apk](http://soft.shouji.com.cn/down/20319.html)
-  * [TerminalEmulator_v 1.0.70](https://github.com/jackpal/Android-Terminal-Emulator)
-  * weixin6315android760.apk (官网)
+  * wpsoffice.apk (官网)
+  * [rootexplorer.apk](http://soft.shouji.com.cn/down/17849.html)
+  * [smart_tools.apk](http://soft.shouji.com.cn/down/20319.html)
+  * [TerminalEmulator](https://github.com/jackpal/Android-Terminal-Emulator)
+  * weixin.apk (官网)
   * ~~WI_IME_Android_2.5.apk (官网)~~
   * [百度输入法小米V6版+6.0.5.3.apk](http://bbs.zhiyoo.com/thread-12435967-1-1.html)
 
@@ -194,16 +194,17 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 用脚本``extra-app.sh``自动抽取lib文件，部署软件和库，压缩为zip文件。
 
 ```
+#link setting file. Overlay='NO', 首次添加; Overlay='YES', 覆盖升级.
 ./extra-app.sh analyse <root-of-base-rom>
 ./extra-app.sh deploy
 ./extra-app.sh zip Y13L-apps.zip
 ```
 
-最后签名。复制 ``Y13L-apps-$(date +%Y%m%d).zip`` 到sd卡，刷机测试。
+最后签名。复制 ``Update-apps-$(date +%Y%m%d).zip`` 到sd卡，刷机测试。
 
 ```
 cd Auto-sign/
-java -jar signapk.jar testkey.x509.pem testkey.pk8 Y13L-apps.zip Y13L-apps-$(date +%Y%m%d).zip
+java -jar signapk.jar testkey.x509.pem testkey.pk8 Y13L-apps.zip Update-apps-$(date +%Y%m%d).zip
 rm Y13L-apps.zip
 ```
 
