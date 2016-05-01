@@ -76,13 +76,9 @@ ROM包
 
 升级包：http://www.vivo.com.cn/dl/151
 
-## 线刷救砖 ROM2(备用)
-
-vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
-
 ## 其他ROM
 
-* [VIVO Y13L1.18.5精简](http://rom.7to.cn/romdetail/1005144)
+* [线刷救砖 ROM2] tools/vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
 
 * [FIRE Y13L MIUI7系列](http://rom.7to.cn/romlist/bbk-vivo-y13l?a=41)
 
