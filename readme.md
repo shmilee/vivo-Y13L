@@ -175,6 +175,7 @@ vivoY13L移动4G_A_1.15.2_trunk线刷包(工具rom教程).rar
   * kiwix.apk (官网)
   * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
   * wpsoffice.apk (官网)
+  * [ProxyDroid.apk](https://apkpure.com/proxydroid/org.proxydroid)([官网](https://github.com/madeye/proxydroid))
   * [rootexplorer.apk](http://soft.shouji.com.cn/down/17849.html)
   * [smart_tools.apk](http://soft.shouji.com.cn/down/20319.html)
   * [TerminalEmulator](https://github.com/jackpal/Android-Terminal-Emulator)
