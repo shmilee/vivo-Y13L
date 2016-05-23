@@ -271,4 +271,6 @@ Hardware	: Qualcomm Technologies, Inc MSM8916
 
 运行 ``mkbusybox.sh``, 然后签名。
 
+## 1.18.9 -> 1.19.1
 
+更新后，需重刷 supersu 和 busybox 。
