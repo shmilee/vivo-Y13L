@@ -94,9 +94,11 @@ ROM包
 * kbox卡刷包    --> kbox3-dateVersion.zip
 
 
-## Y13L-base-1.18.9-shmilee.zip
+## Y13L-base-1.19.1-shmilee.zip
 
-下载官方升级包 PD1304CL_A_1.18.9-update-full.zip
+下载官方升级包 PD1304CL_A_1.19.1-update-full.zip
+
+(md5: 9446ed7ee0d21048389e68f650e01630)
 
 1. 精简与删除。(脚本 ``slim_Y13L_rom.sh`` )
   
@@ -144,13 +146,13 @@ ROM包
   * 调教进度条。show_progress。
 
 6. 最后。删除META-INF目录下的签名，CERT.RSA  CERT.SF  MANIFEST.MF三个文件，
-  然后打包，重新签名。复制 Y13L-base-1.18.9-shmilee.zip 到sd卡，刷机测试。
+  然后打包，重新签名。复制 Y13L-base-1.19.1-shmilee.zip 到sd卡，刷机测试。
   
   ```
   cd <root-of-rom>/
   zip -r -X -9 ../Y13L-base.zip *
   cd ../Auto-sign/
-  java -jar signapk.jar testkey.x509.pem testkey.pk8 ../Y13L-base.zip Y13L-base-1.18.9-shmilee.zip
+  java -jar signapk.jar testkey.x509.pem testkey.pk8 ../Y13L-base.zip Y13L-base-1.19.1-shmilee.zip
   rm ../Y13L-base.zip
   ```
 
@@ -271,6 +273,3 @@ Hardware	: Qualcomm Technologies, Inc MSM8916
 
 运行 ``mkbusybox.sh``, 然后签名。
 
-## 1.18.9 -> 1.19.1
-
-更新后，需重刷 supersu 和 busybox 。
