@@ -165,12 +165,13 @@ ROM包
   * BaiduMaps.apk (官网)
   * [BubbleUPnP.apk](http://bbs.zhiyoo.com/thread-12442204-1-1.html)  
     DLNA server and client, cooperates with XBMC on PC.
+  * ChinaMobile10086.apk (官网)
   * [ezPDF_Reader.apk](http://soft.shouji.com.cn/down/20236.html)
   * [Firefox_Browser.apk](https://apkpure.com/firefox-browser-for-android/org.mozilla.firefox)  
     addons: Adblock Plus, Network Preferences Add-on.  
     CAs: Import the CA file by downloading it in the browser.
   * ForaDictionary.apk ([官网](http://ng-comp.com/fora/android.htm))
-  * kiwix.apk (官网)
+  * ~~kiwix.apk (官网)~~
   * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
   * wpsoffice.apk (官网)
   * [ProxyDroid.apk](https://apkpure.com/proxydroid/org.proxydroid)([官网](https://github.com/madeye/proxydroid))

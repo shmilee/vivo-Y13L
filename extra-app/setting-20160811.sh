@@ -4,23 +4,23 @@
 abi=armeabi-v7a
 abi2=armeabi
 
-APK_DIR="./update-20160501"
+APK_DIR="./update-20160811"
 Overlay='NO'
 
 # 无lib冲突 -> system/app/
 # 有lib冲突 -> system/vivo-apps/
-extra_apps=(BaiduMaps::BaiduMaps_Android_9-2-0_1009179g.apk \
+extra_apps=(BaiduMaps::BaiduMaps_Android_9-4-1_1012676b.apk \
     BubbleUPnP::BubbleUPnP-2.6.1.apk \
+    ChinaMobile10086::CM10086_android_V3.1.0_160530.apk \
     ezPDF_Reader::ezPDF_Reader_v2.6.6.1.apk \
-    Firefox_Browser::Firefox_Browser_v46.0.apk \
-    ForaDictionary::ForaDictionary_v17.2.apk \
-    kiwix::kiwix-1.97.apk \
-    wpsoffice::moffice_9.6.2_1033.apk \
+    Firefox_Browser::Firefox_Browser_v47.0.apk \
+    ForaDictionary::ForaDictionary_v17.3.apk \
+    wpsoffice::moffice_9.8.2_1033_cn00563_multidex_236333.apk \
     ProxyDroid::ProxyDroid_v2.7.4.apk \
     rootexplorer::rootexplorer_3.3.8_109.apk \
     smart_tools::smart_tools_v1.7.9_83.apk \
     TerminalEmulator::TerminalEmulator_v1.0.70.apk \
-    weixin::weixin6316android780.apk \
+    weixin::weixin6323android840.apk \
     BaiduIME::百度输入法小米V6版+6.0.5.3.apk)
 
 # base包已有的库文件
