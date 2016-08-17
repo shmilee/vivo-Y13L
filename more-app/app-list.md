@@ -17,6 +17,7 @@
 * ~~Kingdee.Express_3.2.8_328.apk (官网)~~
 * kiwix-1.97.apk (官网)
 * mobileqq.apk (官网)
+* QQ_international.apk (官网)
 * netease_open_androidphone.apk (官网)
 * owncloud-beta.apk (github-官网)
 * ~~weibo_v5.7.0.apk (官网)~~

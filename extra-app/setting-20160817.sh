@@ -4,7 +4,7 @@
 abi=armeabi-v7a
 abi2=armeabi
 
-APK_DIR="./update-20160811"
+APK_DIR="./update-20160817"
 Overlay='NO'
 
 # 无lib冲突 -> system/app/
