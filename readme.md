@@ -176,14 +176,12 @@ ROM包
     addons: Adblock Plus, Network Preferences Add-on.  
     CAs: Import the CA file by downloading it in the browser.
   * ForaDictionary.apk ([官网](http://ng-comp.com/fora/android.htm))
-  * ~~kiwix.apk (官网)~~
   * ~~Mobile_Classic_12_1_9_Generic_Opera_ARMv5v7.apk ([官网](https://ftp.opera.com/pub/opera/android/classic/))~~
   * wpsoffice.apk (官网)
   * [ProxyDroid.apk](https://apkpure.com/proxydroid/org.proxydroid)([官网](https://github.com/madeye/proxydroid))
   * [rootexplorer.apk](http://soft.shouji.com.cn/down/17849.html)
   * [smart_tools.apk](http://soft.shouji.com.cn/down/20319.html)
   * [TerminalEmulator](https://github.com/jackpal/Android-Terminal-Emulator)
-  * weixin.apk (官网)
   * ~~WI_IME_Android_2.5.apk (官网)~~
   * [百度输入法小米V6版+6.0.5.3.apk](http://bbs.zhiyoo.com/thread-12435967-1-1.html)
 
@@ -194,6 +192,7 @@ ROM包
   
   * ~~[goldendict_1.6.2_A44_CR_HA.apk](http://bbs.mfunz.com/thread-956541-1-1.html)~~
   * GoldenDict-1.6.5-Android-4.4+-free.apk ([官网](http://goldendict.mobi/downloads/android/free/))
+  * QQ_International.apk (官网)
   * [MX_Player_Pro_1.8.4_20160125_AC3_crk.apk](http://www.miui.com/thread-3588261-1-1.html)
 
 用脚本``extra-app.sh``自动抽取lib文件，部署软件和库，压缩为zip文件。
