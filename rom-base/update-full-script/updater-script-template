@@ -1,5 +1,5 @@
 ui_print("=======================");
-ui_print("***vivo-Y13L-base-1.18.9*****");
+ui_print("***vivo-Y13L-base-VERSION*****");
 ui_print("***By shmilee*****");
 ui_print("=======================");
 
