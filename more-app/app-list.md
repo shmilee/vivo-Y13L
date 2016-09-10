@@ -10,6 +10,7 @@
 * ~~BaiduMusic-musicsybutton.apk (官网)~~
 * iBiliPlayer-bili.apk (官网)
 * BusManager.apk (官网)
+* CloudMusic_official.apk (官网)
 * com.vivo.browser_v4.4.8.apk (自动更新)
 * didi_psngr.apk (官网)
 * DoodleJump_v1.66.apk (longlongago)
