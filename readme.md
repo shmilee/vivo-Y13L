@@ -94,15 +94,15 @@ ROM包
 * kbox卡刷包    --> kbox3-dateVersion.zip
 
 
-## Y13L-base-1.19.4-shmilee.zip
+## Y13L-base-1.19.5-shmilee.zip
 
-下载官方升级包 PD1304CL_A_1.19.3-update-full.zip (md5: 4852e92220f7d77e846c9b5577e828b2)
-手机下载 PD1304CL-PD1304CLMA-update-patch_1.19.4_for_1.19.3_201608162247389782.zip 
-(md5: 964e965a88442ae73aea64d888fbe0d8)
+下载官方升级包 PD1304CL_A_1.19.4-update-full.zip (md5: 9eb56972494618801e734e641e6d760b)
+手机下载 PD1304CL-PD1304CLMA-update-patch_1.19.5_for_1.19.4_201609241200172635.zip
+(md5: 0e98d9285fc37b6655140ce5e96b326f)
 
 0. ``update-patch-script/merge_patch.sh``, 合并升级包。
 
-  1.19.3 + patch_1.19.4_for_1.19.3 -> 1.19.4
+  1.19.4 + patch_1.19.5_for_1.19.4 -> 1.19.5
 
 1. 精简与删除。(脚本 ``slim_Y13L_rom.sh`` )
   
@@ -151,13 +151,13 @@ ROM包
   * 调教进度条。show_progress。
 
 6. 最后。删除META-INF目录下的签名，CERT.RSA  CERT.SF  MANIFEST.MF三个文件，
-  然后打包，重新签名。复制 Y13L-base-1.19.4-shmilee.zip 到sd卡，刷机测试。
+  然后打包，重新签名。复制 Y13L-base-1.19.5-shmilee.zip 到sd卡，刷机测试。
   
   ```
   cd <root-of-rom>/
   zip -r -X -9 ../Y13L-base.zip *
   cd ../Auto-sign/
-  java -jar signapk.jar testkey.x509.pem testkey.pk8 ../Y13L-base.zip Y13L-base-1.19.4-shmilee.zip
+  java -jar signapk.jar testkey.x509.pem testkey.pk8 ../Y13L-base.zip Y13L-base-1.19.5-shmilee.zip
   rm ../Y13L-base.zip
   ```
 
