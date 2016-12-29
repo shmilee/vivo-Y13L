@@ -4,12 +4,12 @@
 abi=armeabi-v7a
 abi2=armeabi
 
-APK_DIR="./update-20161212"
+APK_DIR="./update-20161229"
 Overlay='NO'
 
 # 无lib冲突 -> system/app/
 # 有lib冲突 -> system/vivo-apps/
-extra_apps=(BaiduMaps::BaiduMaps_Android_9-5-5_1012676b.apk \
+extra_apps=(BaiduMaps::BaiduMaps_Android_9-6-0_1012676b.apk \
     BubbleUPnP::BubbleUPnP-2.6.1.apk \
     ChinaMobile10086::CM10086_android_V3.5.1_161110.apk \
     ezPDF_Reader::ezPDF_Reader_v2.6.6.1.apk \
@@ -25,11 +25,11 @@ extra_apps=(BaiduMaps::BaiduMaps_Android_9-5-5_1012676b.apk \
 # base包已有的库文件
 # 即使 app 中包含这些库文件，也不算冲突
 # 默认保留使用 base 的库，删除 app带的
-lib_ignore=(libentryexstd.so)
+lib_ignore=(libentryexstd.so libcrypto.so libssl.so)
 
 # -> system/vivo-apps/
 extra_vivoapps=(goldendict::GoldenDict-1.6.5-Android-4.4+-free.apk \
-    qqi::qq_5.1.1.6062_android.apk \
+    qqi::qq_5.1.2.6064_android.apk \
     MX_Player_Pro::MX_Player_Pro_1.8.4_20160125_AC3_crk.apk)
 
 #################### Setting ####################
