@@ -96,13 +96,7 @@ ROM包
 
 ## Y13L-base-1.19.5-shmilee.zip
 
-下载官方升级包 PD1304CL_A_1.19.4-update-full.zip (md5: 9eb56972494618801e734e641e6d760b)
-手机下载 PD1304CL-PD1304CLMA-update-patch_1.19.5_for_1.19.4_201609241200172635.zip
-(md5: 0e98d9285fc37b6655140ce5e96b326f)
-
-0. ``update-patch-script/merge_patch.sh``, 合并升级包。
-
-  1.19.4 + patch_1.19.5_for_1.19.4 -> 1.19.5
+下载官方升级包 PD1304CL_A_1.19.5-update-full.zip (md5: 6e83137919403422147cf69acdccf9c1)
 
 1. 精简与删除。(脚本 ``slim_Y13L_rom.sh`` )
   
