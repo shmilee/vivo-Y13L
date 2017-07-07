@@ -4,18 +4,19 @@
 abi=armeabi-v7a
 abi2=armeabi
 
-APK_DIR="./update-20170315"
+APK_DIR="./update-20170716"
 Overlay='NO'
 
 # 无lib冲突 -> system/app/
 # 有lib冲突 -> system/vivo-apps/
-extra_apps=(BaiduMaps::BaiduMaps_Android_9-7-1_1012676b.apk \
+extra_apps=(BaiduMaps::BaiduMaps_Android_9-8-5_1009176a.apk \
     BubbleUPnP::BubbleUPnP-2.6.1.apk \
-    ChinaMobile10086::ChinaMobile10086_v3.6.apk \
+    ChinaMobile10086::ChinaMobile10086_v3.8.apk \
     ezPDF_Reader::ezPDF_Reader_v2.6.6.1.apk \
-    Firefox_Browser::Firefox_Browser_v47.0.apk \
+    Firefox_Browser::Firefox_Browser_fast_private_v54.0.1.apk \
     ForaDictionary::ForaDictionary_v17.3.apk \
-    wpsoffice::moffice_10.1.2_1033_cn00563_multidex_c6e2c98.apk \
+    wpsoffice::moffice_10.3.3_1033_cn00563_multidex_d64d7fba0.apk \
+    weixin::weixin6510android1080.apk \
     ProxyDroid::ProxyDroid_v2.7.4.apk \
     rootexplorer::rootexplorer_3.3.8_109.apk \
     smart_tools::smart_tools_v1.7.9_83.apk \
@@ -29,7 +30,7 @@ lib_ignore=(libentryexstd.so libcrypto.so libssl.so)
 
 # -> system/vivo-apps/
 extra_vivoapps=(goldendict::GoldenDict-1.6.5-Android-4.4+-free.apk \
-    qqi::qq_5.1.2.6064_android.apk \
+    qqi::qq_5.2.0.6068_android_r24710_GuanWang_537051119_release.apk \
     MX_Player_Pro::MX_Player_Pro_1.8.4_20160125_AC3_crk.apk)
 
 #################### Setting ####################

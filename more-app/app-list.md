@@ -1,7 +1,7 @@
 ## sd卡/more-app ---手动安装---> data/app/
 
 * [2WeiMa_v4.5.apk](http://android.25pp.com/detail_248799.html)
-* 12306v2.5.apk (官网)
+* 12306v2.7.apk (官网)
 * acfun_portal.apk (官网)
 * Adobe Flash Player 11.1.apk
 * alicloud_release.apk (阿里云官网)
@@ -25,7 +25,7 @@
 * mobileqq.apk (官网)
 * netease_open_androidphone.apk (网易公开课官网)
 * owncloud-beta.apk (github-官网)
-* weixin-android.apk (官网)
+* ~~weixin-android.apk (官网)~~
 * weread_android.apk (微信读书)
 * ~~weibo_v5.7.0.apk (官网)~~
 * [搜狗输入法v6.5.2-魅蓝Note2.apk](http://bbs.zhiyoo.com/thread-9664671-1-1.html)
